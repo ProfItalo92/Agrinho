@@ -1,167 +1,164 @@
-/* Variáveis CSS para facilitar a manutenção */
+/* Variáveis CSS para facilitar a manutenção e customização */
 :root {
-    --color-primary: #28a745; /* Verde vibrante */
-    --color-primary-hover: #218838; /* Verde mais escuro para hover */
-    --color-secondary: #007bff; /* Azul */
-    --color-text-dark: #343a40; /* Texto escuro */
-    --color-text-light: #f8f9fa; /* Texto claro */
-    --color-bg-light: #f8f9fa; /* Fundo claro */
-    --color-bg-dark: #343a40; /* Fundo escuro do header/footer */
-    --color-border: #ddd; /* Cor da borda */
-    --font-family-sans: 'Arial', sans-serif;
+    --cor-primaria: #28a745; /* Verde vibrante para elementos principais */
+    --cor-primaria-hover: #218838; /* Tom de verde mais escuro para estados de hover */
+    --cor-secundaria: #007bff; /* Azul para links e destaques secundários */
+    --cor-texto-escuro: #343a40; /* Cor padrão para texto escuro */
+    --cor-texto-claro: #f8f9fa; /* Cor padrão para texto claro, usado em fundos escuros */
+    --cor-fundo-claro: #f8f9fa; /* Fundo levemente claro para seções */
+    --cor-fundo-escuro: #343a40; /* Fundo escuro para cabeçalho e rodapé */
+    --cor-borda: #ddd; /* Cor padrão para bordas */
+    --familia-fonte-sans: 'Arial', sans-serif; /* Fonte padrão sem serifa */
 }
 
-/* --- Reset Básico e Tipografia --- */
+/* --- Reset Básico e Estilos Globais --- */
 body {
-    margin: 0;
-    font-family: var(--font-family-sans);
-    line-height: 1.6;
-    color: var(--color-text-dark);
-    background-color: #fff;
-    scroll-behavior: smooth; /* Rolagem suave para âncoras */
+    margin: 0; /* Remove margens padrão do navegador */
+    font-family: var(--familia-fonte-sans); /* Define a fonte do corpo do texto */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+    color: var(--cor-texto-escuro); /* Cor do texto padrão */
+    background-color: #fff; /* Fundo branco para a página */
+    scroll-behavior: smooth; /* Habilita rolagem suave para âncoras (links internos) */
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1200px; /* Largura máxima do conteúdo centralizado */
+    margin: 0 auto; /* Centraliza o container na página */
+    padding: 0 20px; /* Preenchimento lateral para evitar que o conteúdo cole nas bordas */
 }
 
 h1, h2, h3 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: var(--color-text-dark);
+    margin-top: 0; /* Remove margem superior padrão */
+    margin-bottom: 20px; /* Margem inferior para espaçamento de títulos */
+    color: var(--cor-texto-escuro); /* Cor padrão para títulos */
 }
 
-h1 { font-size: 2.8em; }
-h2 { font-size: 2.2em; }
-h3 { font-size: 1.6em; }
+h1 { font-size: 2.8em; } /* Tamanho de fonte para o título principal */
+h2 { font-size: 2.2em; } /* Tamanho de fonte para títulos de seção */
+h3 { font-size: 1.6em; } /* Tamanho de fonte para subtítulos */
 
 p {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Margem inferior para parágrafos */
 }
 
 a {
-    color: var(--color-primary);
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: var(--cor-primaria); /* Cor padrão para links */
+    text-decoration: none; /* Remove sublinhado padrão dos links */
+    transition: color 0.3s ease; /* Transição suave da cor ao interagir */
 }
 
 a:hover {
-    text-decoration: underline;
-    color: var(--color-primary-hover);
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: var(--cor-primaria-hover); /* Muda a cor do link ao passar o mouse */
 }
 
-.text-center {
+/* Classes de Utilidade */
+.texto-centralizado { /* Centraliza o texto */
     text-align: center;
 }
 
-.lead {
+.destaque-principal { /* Estilo para parágrafos de destaque (lead) */
     font-size: 1.2em;
-    font-weight: 300;
+    font-weight: 300; /* Levemente mais fino */
     margin-bottom: 30px;
 }
 
-.mt-4 {
+.margem-topo-4 { /* Adiciona margem superior de 40px */
     margin-top: 40px;
 }
 
 /* --- Botões --- */
-.btn-primary {
-    display: inline-block;
-    background-color: var(--color-primary);
-    color: var(--color-text-light);
-    padding: 12px 25px;
-    border: none; /* Adicionado para botões de formulário */
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer; /* Adicionado */
-    transition: background-color 0.3s ease;
+.btn-principal { /* Estilo para botões primários */
+    display: inline-block; /* Permite definir largura e altura */
+    background-color: var(--cor-primaria); /* Cor de fundo do botão */
+    color: var(--cor-texto-claro); /* Cor do texto do botão */
+    padding: 12px 25px; /* Preenchimento interno */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
 }
 
-.btn-primary:hover {
-    background-color: var(--color-primary-hover);
-    text-decoration: none;
+.btn-principal:hover {
+    background-color: var(--cor-primaria-hover); /* Cor de fundo ao passar o mouse */
+    text-decoration: none; /* Remove sublinhado se houver */
 }
 
-/* --- Header --- */
+/* --- Cabeçalho (Header) --- */
 header {
-    background-color: var(--color-bg-dark);
-    color: var(--color-text-light);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-color: var(--cor-fundo-escuro); /* Cor de fundo do cabeçalho */
+    color: var(--cor-texto-claro); /* Cor do texto no cabeçalho */
+    padding: 15px 0; /* Preenchimento superior e inferior */
+    position: sticky; /* Mantém o cabeçalho fixo no topo ao rolar */
+    top: 0; /* Fixa no topo */
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra suave abaixo do cabeçalho */
 }
 
 header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Usa Flexbox para organizar logo e navegação */
+    justify-content: space-between; /* Espaça logo e navegação nas extremidades */
+    align-items: center; /* Alinha verticalmente no centro */
 }
 
 /* Estilo para o contêiner do logo */
 .logo {
-    /* Remova as propriedades de fonte que eram para texto */
-    /* font-size: 1.8em; */
-    /* font-weight: bold; */
-    /* color: var(--color-primary); */ 
+    /* Não há estilos de fonte aqui, pois é uma imagem */
 }
 
 .logo img {
-    height: 40px; /* Altura do logo - ajuste conforme o tamanho desejado */
-    width: auto;  /* Mantém a proporção da imagem */
-    vertical-align: middle; /* Para alinhar com outros elementos se houver */
-    max-width: 180px; /* Limite a largura máxima do logo, se necessário */
+    height: 40px; /* Altura do logo - ajuste conforme o tamanho ideal */
+    width: auto;  /* Mantém a proporção original da imagem */
+    vertical-align: middle; /* Alinha verticalmente a imagem em relação ao texto (se houver) */
+    max-width: 180px; /* Limite a largura máxima do logo para evitar que ele fique muito grande */
 }
 
-
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    list-style: none; /* Remove marcadores de lista */
+    margin: 0; /* Remove margem padrão da lista */
+    padding: 0; /* Remove preenchimento padrão da lista */
+    display: flex; /* Usa Flexbox para alinhar itens de navegação horizontalmente */
 }
 
 nav ul li {
-    margin-left: 25px;
+    margin-left: 25px; /* Espaçamento entre os itens de navegação */
 }
 
 nav ul li a {
-    color: var(--color-text-light);
-    font-weight: bold;
-    transition: color 0.3s ease;
+    color: var(--cor-texto-claro); /* Cor dos links de navegação */
+    font-weight: bold; /* Texto em negrito */
+    transition: color 0.3s ease; /* Transição suave da cor ao passar o mouse */
 }
 
 nav ul li a:hover {
-    color: var(--color-primary);
-    text-decoration: none;
+    color: var(--cor-primaria); /* Cor dos links de navegação ao passar o mouse */
+    text-decoration: none; /* Remove sublinhado ao passar o mouse */
 }
 
-/* --- Hero Section --- */
+/* --- Seção Principal (Hero) --- */
 .hero {
-    /* Substitua 'hero-bg.jpg' por uma imagem de fundo impactante e adicione-a na pasta 'images' */
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero-bg.jpg') no-repeat center center/cover; 
-    color: var(--color-text-light);
-    text-align: center;
-    padding: 100px 0;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    /* Imagem de fundo da seção hero. Atualize o caminho da imagem se necessário. */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg') no-repeat center center/cover; 
+    color: var(--cor-texto-claro); /* Cor do texto na seção hero */
+    text-align: center; /* Centraliza o texto */
+    padding: 100px 0; /* Preenchimento superior e inferior */
+    min-height: 60vh; /* Altura mínima de 60% da altura da viewport */
+    display: flex; /* Usa Flexbox para centralizar conteúdo */
+    align-items: center; /* Alinha itens verticalmente no centro */
+    justify-content: center; /* Alinha itens horizontalmente no centro */
+    flex-direction: column; /* Organiza itens em coluna */
     position: relative;
 }
 
-.hero-content {
+.hero-conteudo { /* Estilo para o conteúdo textual da seção hero */
     max-width: 800px;
     margin-bottom: 50px;
 }
 
 .hero h1 {
-    color: var(--color-text-light);
+    color: var(--cor-texto-claro); /* Cor do título principal na seção hero */
     font-size: 3.5em;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -172,60 +169,60 @@ nav ul li a:hover {
     margin-bottom: 40px;
 }
 
-.hero-highlights {
+.hero-destaques { /* Contêiner para os itens de destaque na seção hero */
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 30px; /* Espaçamento entre os itens de destaque */
     margin-top: 30px; 
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
 }
 
-.highlight-item {
-    background-color: rgba(255, 255, 255, 0.15);
+.destaque-item { /* Estilo para cada item de destaque na seção hero */
+    background-color: rgba(255, 255, 255, 0.15); /* Fundo translúcido */
     padding: 20px 30px;
-    border-radius: 10px;
+    border-radius: 10px; /* Cantos arredondados */
     text-align: center;
     width: 200px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
 }
 
-.highlight-item:hover {
-    transform: translateY(-5px);
+.destaque-item:hover {
+    transform: translateY(-5px); /* Move o item ligeiramente para cima ao passar o mouse */
 }
 
-.highlight-item img {
+.destaque-item img {
     width: 60px;
     height: 60px;
     margin-bottom: 10px;
 }
 
-.highlight-item h3 {
-    color: var(--color-text-light);
+.destaque-item h3 {
+    color: var(--cor-texto-claro);
     font-size: 1.4em;
     margin-bottom: 0;
 }
 
-/* --- Seções Gerais --- */
-.section-padded {
+/* --- Seções Gerais (Layout Padrão) --- */
+.secao-acolchoada { /* Preenchimento padrão para todas as seções */
     padding: 80px 0;
 }
 
-.bg-light {
-    background-color: var(--color-bg-light);
+.fundo-claro { /* Fundo claro para seções específicas */
+    background-color: var(--cor-fundo-claro);
 }
 
-/* --- Como Funciona Section --- */
+/* --- Seção "Como Funciona" --- */
 #como-funciona h2 {
     margin-bottom: 15px;
 }
 
-#como-funciona .lead {
+#como-funciona .destaque-principal {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.workflow-diagram {
+.diagrama-fluxo { /* Layout para os passos do fluxo de trabalho */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -234,41 +231,41 @@ nav ul li a:hover {
     margin-top: 50px;
 }
 
-.workflow-step {
+.passo-fluxo { /* Estilo para cada passo no diagrama de fluxo */
     text-align: center;
     width: 250px;
     padding: 20px;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--cor-borda);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.workflow-step:hover {
+.passo-fluxo:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-.workflow-step img {
+.passo-fluxo img {
     width: 80px;
     height: 80px;
     margin-bottom: 15px;
 }
 
-.workflow-step h3 {
-    color: var(--color-primary);
+.passo-fluxo h3 {
+    color: var(--cor-primaria);
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-.workflow-diagram .arrow {
+.diagrama-fluxo .seta { /* Estilo para as setas no diagrama de fluxo */
     font-size: 2.5em;
-    color: var(--color-secondary);
+    color: var(--cor-secundaria);
     font-weight: bold;
     margin: 0 15px;
 }
 
-.energy-solution {
+.solucao-energia { /* Layout para os itens de solução de energia */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -276,7 +273,7 @@ nav ul li a:hover {
     margin-top: 80px;
 }
 
-.energy-item {
+.item-energia { /* Estilo para cada item de solução de energia */
     text-align: center;
     width: 300px;
     padding: 30px;
@@ -286,32 +283,32 @@ nav ul li a:hover {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.energy-item:hover {
+.item-energia:hover {
     background-color: #e6f7e6;
     transform: translateY(-5px);
 }
 
-.energy-item img {
+.item-energia img {
     width: 100px;
     height: 100px;
     margin-bottom: 20px;
 }
 
-.energy-item h3 {
-    color: var(--color-primary);
+.item-energia h3 {
+    color: var(--cor-primaria);
     font-size: 1.8em;
     margin-bottom: 10px;
 }
 
-/* --- Benefícios Section --- */
-.benefits-grid {
+/* --- Seção de Benefícios --- */
+.grade-beneficios { /* Layout para a grade de benefícios */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas responsivas */
     gap: 30px;
     margin-top: 50px;
 }
 
-.benefit-item {
+.item-beneficio { /* Estilo para cada item de benefício */
     background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
@@ -320,30 +317,30 @@ nav ul li a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.benefit-item:hover {
+.item-beneficio:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.benefit-item img {
+.item-beneficio img {
     width: 80px;
     height: 80px;
     margin-bottom: 20px;
 }
 
-.benefit-item h3 {
-    color: var(--color-primary);
+.item-beneficio h3 {
+    color: var(--cor-primaria);
     font-size: 1.6em;
     margin-bottom: 15px;
 }
 
-.benefit-item p {
+.item-beneficio p {
     font-size: 1em;
     color: #6c757d;
 }
 
-/* --- Contato Section --- */
-.contact-grid {
+/* --- Seção de Contato --- */
+.grade-contato { /* Layout para a grade de informações de contato */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
@@ -351,77 +348,77 @@ nav ul li a:hover {
     text-align: left; 
 }
 
-.contact-info h3 {
-    color: var(--color-primary);
+.informacoes-contato h3 { /* Títulos dentro das informações de contato */
+    color: var(--cor-primaria);
     margin-bottom: 20px;
 }
 
-.contact-info p {
+.informacoes-contato p {
     margin-bottom: 10px;
     font-size: 1.1em;
     color: #555;
 }
 
-.contact-info p a {
-    color: var(--color-secondary);
+.informacoes-contato p a {
+    color: var(--cor-secundaria);
 }
 
-.social-links {
+.links-sociais { /* Contêiner para os links de redes sociais */
     margin-top: 20px;
 }
 
-.social-links img {
+.links-sociais img {
     width: 40px;
     height: 40px;
     margin-right: 15px;
     transition: transform 0.3s ease;
 }
 
-.social-links img:hover {
-    transform: scale(1.1);
+.links-sociais img:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone ao passar o mouse */
 }
 
-.contact-form {
+.formulario-contato { /* Estilo para o formulário de contato */
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.contact-form h3 {
-    color: var(--color-primary);
+.formulario-contato h3 {
+    color: var(--cor-primaria);
     margin-bottom: 25px;
     text-align: center;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="tel"],
-.contact-form textarea {
-    width: calc(100% - 24px); /* Ajuste para padding e borda */
+.formulario-contato input[type="text"],
+.formulario-contato input[type="email"],
+.formulario-contato input[type="tel"],
+.formulario-contato textarea {
+    width: calc(100% - 24px); /* Largura total menos padding e borda */
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
-    box-sizing: border-box; 
+    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura */
 }
 
-.contact-form textarea {
-    resize: vertical; 
+.formulario-contato textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
 }
 
-.contact-form button {
+.formulario-contato button {
     width: 100%;
     padding: 15px;
     font-size: 1.1em;
     cursor: pointer;
 }
 
-/* --- Footer --- */
+/* --- Rodapé (Footer) --- */
 footer {
-    background-color: var(--color-bg-dark);
-    color: var(--color-text-light);
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-texto-claro);
     text-align: center;
     padding: 30px 0;
     margin-top: 50px;
@@ -432,78 +429,80 @@ footer p {
     font-size: 0.9em;
 }
 
-/* --- Responsividade para o logo --- */
+/* --- Responsividade (Media Queries) --- */
 @media (max-width: 768px) {
-    /* ... (outras regras de responsividade que já existem) ... */
+    header .container {
+        flex-direction: column; /* Empilha logo e navegação em telas menores */
+        text-align: center;
+    }
 
-    .logo img {
-        height: 35px; /* Ajuste a altura do logo para telas menores */
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap; /* Permite que os itens de navegação quebrem linha */
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px 10px 10px; /* Ajusta espaçamento dos itens de navegação */
+    }
+
+    .logo img { /* Ajusta o tamanho do logo em telas menores */
+        height: 35px; 
         max-width: 150px;
     }
-}
 
-nav ul {
-    margin-top: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+    .hero h1 {
+        font-size: 2.5em;
+    }
 
-nav ul li {
-        margin: 0 10px 10px 10px;
-}
+    .hero p {
+        font-size: 1.2em;
+    }
 
-.hero h1 {
-    font-size: 2.5em;
-}
+    .hero-destaques {
+        flex-direction: column; /* Empilha os destaques da hero em telas menores */
+        align-items: center;
+    }
 
-.hero p {
-    font-size: 1.2em;
-}
+    .destaque-item {
+        width: 80%; /* Aumenta a largura dos itens de destaque */
+    }
 
-.hero-highlights {
-    flex-direction: column;
-    align-items: center;
-}
+    .diagrama-fluxo {
+        flex-direction: column; /* Empilha os passos do fluxo de trabalho */
+    }
 
-.highlight-item {
-    width: 80%; 
-}
+    .diagrama-fluxo .seta {
+        transform: rotate(90deg); /* Gira a seta para apontar para baixo */
+        margin: 15px 0;
+    }
 
-.workflow-diagram {
-    flex-direction: column;
-}
+    .passo-fluxo, .item-energia, .item-beneficio {
+        width: 100%; /* Ocupa a largura total em telas menores */
+        margin-bottom: 20px; /* Adiciona espaçamento entre os itens */
+    }
 
-.workflow-diagram .arrow {
-    transform: rotate(90deg); 
-    margin: 15px 0;
-}
+    .secao-acolchoada {
+        padding: 50px 0; /* Reduz o preenchimento da seção em telas menores */
+    }
 
-.workflow-step, .energy-item, .benefit-item {
-    width: 100%; 
-    margin-bottom: 20px; 
-}
+    .grade-contato {
+        grid-template-columns: 1fr; /* Uma coluna para informações de contato */
+        text-align: center;
+    }
 
-.section-padded {
-    padding: 50px 0;
-}
+    .links-sociais {
+        display: flex; /* Mantém ícones sociais centralizados */
+        justify-content: center;
+    }
 
-.contact-grid {
-    grid-template-columns: 1fr; 
-    text-align: center;
+    .formulario-contato input[type="text"],
+    .formulario-contato input[type="email"],
+    .formulario-contato input[type="tel"],
+    .formulario-contato textarea {
+        width: calc(100% - 24px); 
+    }
 }
-
-.social-links {
-    display: flex;
-    justify-content: center;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="tel"],
-.contact-form textarea {
-    width: calc(100% - 24px); /* Garante que o padding e borda não causem overflow */
-}
-
 
 @media (max-width: 480px) {
     .hero h1 {
@@ -514,12 +513,12 @@ nav ul li {
         font-size: 1em;
     }
 
-    .btn-primary {
+    .btn-principal {
         padding: 10px 20px;
         font-size: 0.9em;
     }
 
-    .highlight-item {
+    .destaque-item {
         padding: 15px 20px;
     }
 }
